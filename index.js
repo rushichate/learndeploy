@@ -18,7 +18,7 @@ app.listen(process.env.port,async()=>{
         await collection
         console.log("Connected to DB")
     }catch(err){
-        console.log("Cannot connect to DB")
+        console.log("Cannot connect to DB");
         console.log(err);
     }
     console.log(`Server running at port ${process.env.port}`)
