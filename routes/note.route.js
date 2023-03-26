@@ -1,6 +1,7 @@
 const express = require("express")
 const { NoteModel } = require("../module/note.model")
 const noteRouter = express.Router()
+const jwt = require("jsonwebtoken")
 
 noteRouter.get("/",async(req,res)=>{
     try{

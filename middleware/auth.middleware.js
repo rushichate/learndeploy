@@ -5,6 +5,7 @@ const auth = (req,res,next)=>{
    if(token){
     const decoded=jwt.verify(token,"rushi")
     if(decoded){
+        req.body.userID = decoded.userID
    next()
     }else{
         res.status(400).send({"msg":"Please login first"})
